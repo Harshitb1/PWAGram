@@ -20,6 +20,15 @@ function openCreatePostModal() {
 
     deferredPrompt = null;
   }
+
+  // if ('serviceWorker' in navigator) {
+  //   navigator.serviceWorker.getRegistrations()
+  //     .then(function(registrations) {
+  //       for (var i = 0; i < registrations.length; i++) {
+  //         registrations[i].unregister();
+  //       }
+  //     })
+  // }
 }
 
 function closeCreatePostModal() {
@@ -75,10 +84,19 @@ function createCard() {
   sharedMomentsArea.appendChild(cardWrapper);
 }
 
-var url = 'https://httpbin.org/get';
+var url = 'https://httpbin.org/post';
 var networkDataReceived = false;
 
-fetch(url)
+fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  },
+  body: JSON.stringify({
+    message: 'Some message'
+  })
+})
   .then(function(res) {
     return res.json();
   })
