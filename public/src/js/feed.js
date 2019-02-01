@@ -92,6 +92,7 @@ function updateUI(data) {
 }
 
 // var url = 'https://pwagram-99adf.firebaseio.com/posts.json';
+
 var url = "https://pwagram-e16c1.firebaseio.com/posts.json";
 var networkDataReceived = false;
 
