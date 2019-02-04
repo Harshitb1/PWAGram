@@ -20,6 +20,8 @@
     "http-server": "^0.10.0"
   },
   "dependencies": {
-    "cors": "^2.8.5"
+    "@google-cloud/storage": "^2.4.1",
+    "cors": "^2.8.5",
+    "formidable": "^1.2.1"
   }
 }
